@@ -26,7 +26,7 @@ def index():
                            stuff= stuff,
                            pizza = favorite_pizza)
 
-# localhost:5000/user/Rusaid
+# localhost:5000/user/Rusaidf
 @app.route('/user:<name>')
 
 def user(name):

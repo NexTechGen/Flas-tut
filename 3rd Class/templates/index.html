@@ -1,27 +1,28 @@
-<h1>Hello World!</h1>
+{% extends 'main.html' %}
 
-<p>This is my First Page</p>
+{% block content %}
+    <h1>Hello World!</h1>
 
-<p>My name is {{ first_name }}</p>
+    <p>This is my First Page</p>
 
-<p>Stuff is {{ stuff }}</p>
-
-<p>Stuff is {{ stuff | safe }}</p>
-
-<p>Stuff is {{ stuff | striptags }}</p>
-
-<p>Stuff is {{ stuff | title }}</p>
+    <p>My name is {{ first_name }}</p>
 
 
-{{ pizza }}
+    <p>Stuff is {{ stuff | striptags }}</p>
 
-<h3>Favorite Pizza</h3>
-<ul>
-{% for topping in pizza %}
-    <li>{{ topping }}</li>
-{% endfor %}
-</ul>
 
-<h3>Printing first item</h3>
-{{ pizza.0 }}
+
+    {{ pizza }}
+
+    <h3>Favorite Pizza</h3>
+    <ul>
+    {% for topping in pizza %}
+        <li>{{ topping }}</li>
+    {% endfor %}
+    </ul>
+
+    <h3>Printing first item</h3>
+    {{ pizza.0 }}
+
+{% endblock %}
 
